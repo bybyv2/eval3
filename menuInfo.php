@@ -32,6 +32,8 @@ $researchShoeName = "SELECT rating, compagnyName, jobTitle, salaryCHF, location,
 //attendre 2 secondes
     sleep(2);
     $result = $db->query($researchShoeName)->fetch_all(MYSQLI_BOTH);
+
+
     ?><table class="table table-striped">
     <thead>
     <tr>
@@ -60,6 +62,9 @@ $researchShoeName = "SELECT rating, compagnyName, jobTitle, salaryCHF, location,
         </tr>
 
         <?php
+    }
+    if ($result == null) {
+        echo "No result";
     }
     ?>
     </tbody>
